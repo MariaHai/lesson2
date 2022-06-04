@@ -4,8 +4,7 @@
 # print(response.read())
 
 import  requests
-response = requests.get("https://httpbin.org/get")
-print(response.content)
-print(f"Datatype - {type(response.content)}")
+response = requests.post("https://httpbin.org/post", data="test Data", headers={"h1":"test Title"})
+
+
 print(response.text)
-print(f"Datatype - {type(response.text)}")
